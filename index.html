@@ -1,154 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeremy Thorpe | Instructional Designer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f7f9fc;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(to right, #1f3a93, #28c7fa);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5em;
-      margin: 0 0 10px;
-    }
-    header p {
-      font-size: 1.2em;
-    }
-    .btn {
-      background-color: white;
-      color: #1f3a93;
-      padding: 10px 20px;
-      margin-top: 20px;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-    }
-    .tools, .projects {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .tools div, .project {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      flex: 1 1 calc(45% - 20px);
-    }
-    .project h3 {
-      margin-top: 0;
-    }
-    .resume, .contact {
-      text-align: center;
-    }
-    footer {
-      background-color: #eee;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #666;
-    }
-  </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jeremy Thorpe | Instructional Designer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:#f5f7fa;
+color:#1a1a1a;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 60px;
+font-weight:600;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#333;
+}
+
+nav a:hover{
+color:#1f3a93;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+background:#a8c7d6;
+padding:120px 60px;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+overflow:hidden;
+}
+
+/* geometric shapes */
+
+.hero::before{
+content:"";
+position:absolute;
+width:320px;
+height:320px;
+background:rgba(255,255,255,0.15);
+top:50px;
+left:80px;
+border-radius:20px;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:220px;
+height:220px;
+background:rgba(0,0,0,0.05);
+bottom:40px;
+right:120px;
+border-radius:20px;
+}
+
+/* glass panel */
+
+.panel{
+background:rgba(255,255,255,0.35);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:14px;
+max-width:520px;
+box-shadow:0 8px 30px rgba(0,0,0,0.1);
+}
+
+.hero h1{
+font-size:52px;
+margin:0 0 10px 0;
+}
+
+.hero h2{
+font-size:22px;
+font-weight:400;
+margin-bottom:20px;
+}
+
+/* PHOTO */
+
+.hero-photo{
+display:flex;
+justify-content:center;
+position:relative;
+}
+
+.hero-photo img{
+width:320px;
+border-radius:14px;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* BUTTON */
+
+.btn{
+display:inline-block;
+background:#1f3a93;
+color:white;
+padding:12px 22px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+margin-top:10px;
+}
+
+.btn:hover{
+background:#142b73;
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 60px;
+max-width:1100px;
+margin:auto;
+}
+
+/* TOOLS GRID */
+
+.tools{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.tools div{
+background:white;
+padding:16px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+background:#e8f1f5;
+}
+
+.projects{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.project{
+background:white;
+padding:26px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:all .25s ease;
+}
+
+.project:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.project h3{
+margin-top:0;
+}
+
+/* RESUME */
+
+.resume{
+text-align:center;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+background:#f2f6f8;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+font-size:14px;
+background:#e6e6e6;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+gap:50px;
+text-align:center;
+}
+
+.hero-photo img{
+width:240px;
+}
+
+nav{
+flex-direction:column;
+gap:12px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Jeremy Thorpe</h1>
-    <p>Instructional Designer & Learning Consultant</p>
-    <a class="btn" href="#portfolio">View My Work</a>
-  </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I design engaging, learner-focused experiences using evidence-based instructional methods. My work combines creativity with performance outcomes to support real-world skill development.</p>
-    <h3>Tools & Technologies</h3>
-    <div class="tools">
-  <div>Articulate Storyline</div>
-  <div>Rise 360</div>
-  <div>Adobe Captivate</div>
-  <div>Camtasia</div>
-  <div>Vyond</div>
-  <div>Adobe Creative Suite</div>
-  <div>Canva</div>
-  <div>LMS Administration</div>
-  <div>Knowledge Management Systems</div>
-  <div>AI-Assisted Content Development</div>
-    </div>
-  </section>
+<!-- NAV -->
 
-<section id="portfolio">
-  <h2>Portfolio Projects</h2>
-  <p class="portfolio-note">
-    All projects reflect original work. Organizational names, data, and proprietary details have been modified or anonymized for confidentiality.
-  </p>
- <div class="projects">
+<nav>
 
-  </div>
+<div><strong>Jeremy Thorpe</strong></div>
+
+<div>
+<a href="#portfolio">Work</a>
+<a href="#resume">Resume</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="panel">
+
+<h1>Jeremy Thorpe</h1>
+
+<h2>Instructional Designer & Learning Consultant</h2>
+
+<p>
+I design engaging, learner-focused experiences using evidence-based instructional methods that support real-world skill development.
+</p>
+
+<a class="btn" href="#portfolio">View My Work</a>
 
 </div>
-      <div class="project">
-        <h3>Claims System Navigation Training</h3>
-        <p>Interactive Articulate Storyline module teaching non-processing staff how to locate claims, interpret DCN numbers, and navigate documents in the SDS QuickClaim system.</p>
-<a class="btn" href="modules/claims-system-navigation-training/story.html?v=1" target="_blank">
-Launch Module</a>
-      </div>
-      <div class="project">
-        <h3>Instructor-Led Training Deck</h3>
-        <p>Facilitator-led professional development workshop focused on improving focus, managing workplace distractions, and building daily productivity strategies to enhance collaboration, documentation quality, and work-life balance.</p>
-        <a class="btn" href="Master Your Day.pdf" target="_blank">View Slides</a>
-      </div>
-      <div class="project">
-        <h3>Monthly Operating Report Deck</h3>
-        <p>Executive-level monthly dashboard created to report on training operations, performance metrics, satisfaction scores, and strategic initiatives.</p>
-        <a class="btn" href="Operations Training Update Presentation.pdf" target="_blank">View Slides</a>
-      </div>
-   <div class="project">
-  <h3>Choosing Health Insurance Training</h3>
-  <p>Interactive Rise 360 microlearning course that helps learners understand the differences between traditional PPO health plans and high-deductible health plans (HDHP).</p>
-  <a class="btn" href="risemodule/healthinsurance/index.html" target="_blank">
-  Launch Module</a>
-</div>
-</div>
-  </section>
 
-  <section class="resume">
-    <h2>Resume</h2>
-    <a class="btn" 
-   href="JEREMY THORPE 2026.pdf" 
-   target="_blank">
-   View My Resume
+<div class="hero-photo">
+
+<img src="assets/profile-photo.jpg" alt="Jeremy Thorpe">
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section>
+
+<h2>About Me</h2>
+
+<p>
+I design engaging, learner-focused experiences using evidence-based instructional methods. My work combines creativity with performance outcomes to support real-world skill development.
+</p>
+
+<h3>Tools & Technologies</h3>
+
+<div class="tools">
+
+<div>Articulate Storyline</div>
+<div>Rise 360</div>
+<div>Adobe Captivate</div>
+<div>Camtasia</div>
+<div>Vyond</div>
+<div>Adobe Creative Suite</div>
+<div>Canva</div>
+<div>LMS Administration</div>
+<div>Knowledge Management Systems</div>
+<div>AI-Assisted Content Development</div>
+
+</div>
+
+</section>
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio" class="portfolio">
+
+<h2>Portfolio Projects</h2>
+
+<p>
+All projects reflect original work. Organizational names and proprietary data have been modified for confidentiality.
+</p>
+
+<div class="projects">
+
+<div class="project">
+<h3>Claims System Navigation Training</h3>
+<p>Interactive Storyline module teaching system navigation and document retrieval in QuickClaim.</p>
+<a class="btn" href="modules/claims-system-navigation-training/story.html?v=1" target="_blank">Launch Module</a>
+</div>
+
+<div class="project">
+<h3>Instructor-Led Training Deck</h3>
+<p>Workshop focused on workplace focus, distraction management, and productivity strategies.</p>
+<a class="btn" href="Master Your Day.pdf" target="_blank">View Slides</a>
+</div>
+
+<div class="project">
+<h3>Monthly Operating Report Deck</h3>
+<p>Executive dashboard reporting training metrics and strategic initiatives.</p>
+<a class="btn" href="Operations Training Update Presentation.pdf" target="_blank">View Slides</a>
+</div>
+
+<div class="project">
+<h3>Choosing Health Insurance Training</h3>
+<p>Rise 360 microlearning course explaining PPO vs HDHP plan differences.</p>
+<a class="btn" href="risemodule/healthinsurance/index.html" target="_blank">Launch Module</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- RESUME -->
+
+<section id="resume" class="resume">
+
+<h2>Resume</h2>
+
+<a class="btn" href="JEREMY THORPE 2026.pdf" target="_blank">
+View My Resume
 </a>
-  </section>
 
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p>📧 <a href="mailto:jeremydonthorpe@icloud.com">jeremydonthorpe@icloud.com</a> &nbsp; 
-  </section>
+</section>
 
-  <footer>
-    © 2026 Jeremy Thorpe. All rights reserved.
-  </footer>
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<h2>Contact</h2>
+
+<p>📧 <a href="mailto:jeremydonthorpe@icloud.com">jeremydonthorpe@icloud.com</a></p>
+
+</section>
+
+<footer>
+
+© 2026 Jeremy Thorpe. All rights reserved.
+
+</footer>
+
 </body>
 </html>
