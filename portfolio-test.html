@@ -1,130 +1,157 @@
-body {
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-margin:0;
-font-family:Montserrat;
-color:#1d1e20;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-}
+<title>Accent Pro Portfolio</title>
 
-.container {
+<link rel="stylesheet" href="css/style.css">
 
-width:90%;
-max-width:1200px;
-margin:auto;
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-}
+</head>
 
-.header {
+<body>
 
-background:white;
-padding:20px 0;
+<header class="header">
 
-}
+<div class="container nav">
 
-.nav {
+<img src="assets/images/logo.png" class="logo">
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+<nav>
 
-}
+<a href="#about">About</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
 
-nav a {
+</nav>
 
-margin-left:30px;
-text-decoration:none;
-color:#555;
+</div>
 
-}
+</header>
 
-.hero {
 
-height:90vh;
-background-image:url("../assets/images/hero.jpg");
-background-size:cover;
-background-position:center;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
+<section class="hero">
 
-}
+<div class="hero-overlay"></div>
 
-.hero-overlay {
+<div class="hero-content">
 
-position:absolute;
-background:black;
-opacity:.25;
-width:100%;
-height:100%;
+<h1>Learning & Development Leadership</h1>
 
-}
+<p>
+Instructional Design • AI Prompt Engineering • eLearning Development
+</p>
 
-.hero-content {
+<a class="btn" href="#portfolio">View Portfolio</a>
 
-position:relative;
-color:white;
-text-align:center;
+</div>
 
-}
+</section>
 
-.hero h1 {
 
-font-family:"Abril Fatface";
-font-size:48px;
+<section id="about" class="about container">
 
-}
+<h2>About</h2>
 
-.btn {
+<p>
+With 15+ years of experience in Learning & Development leadership,
+I design engaging learning systems, AI prompts, and instructional
+frameworks that align business goals with learner outcomes.
+</p>
 
-display:inline-block;
-background:#673de6;
-color:white;
-padding:12px 24px;
-text-decoration:none;
-margin-top:20px;
+</section>
 
-}
 
-.portfolio-grid {
+<section id="portfolio" class="portfolio container">
 
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+<h2>Portfolio</h2>
 
-}
+<div class="portfolio-grid">
 
-.portfolio-item img {
+<div class="portfolio-item">
 
-width:100%;
+<img src="assets/images/project1.jpg">
 
-}
+<h3>Retention & Engagement Edutainment Video</h3>
 
-.skills ul {
+<a href="#">View Project</a>
 
-list-style:none;
-padding:0;
+</div>
 
-}
 
-.skills li {
+<div class="portfolio-item">
 
-margin:10px 0;
+<img src="assets/images/project2.jpg">
 
-}
+<h3>Learning Product Landing Page</h3>
 
-.contact {
+<a href="#">View Project</a>
 
-background:#2a2f3f;
-color:white;
-padding:60px 0;
-text-align:center;
+</div>
 
-}
 
-.footer {
+<div class="portfolio-item">
 
-text-align:center;
-padding:20px;
+<img src="assets/images/project3.jpg">
 
-}
+<h3>Flagship Training System</h3>
+
+<a href="#">View Project</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="skills" class="skills container">
+
+<h2>Core Strengths</h2>
+
+<ul>
+
+<li>Instructional Design Strategy</li>
+<li>AI Prompt Engineering</li>
+<li>Learning Architecture</li>
+<li>Organizational Gap Analysis</li>
+<li>Learning Systems Development</li>
+
+</ul>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<h2>Contact</h2>
+
+<p>
+Reach out to discuss consulting, instructional design leadership,
+or project collaboration.
+</p>
+
+<a class="btn" href="mailto:consultcamilla@accentprotraining.com">
+Contact Me
+</a>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+<p>© Accent Pro Institute</p>
+
+</footer>
+
+</body>
+</html>
