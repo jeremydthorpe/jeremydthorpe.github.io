@@ -22,7 +22,7 @@ color:#1a1a1a;
 
 nav{
 display:flex;
-justify-content:space-between;
+justify-content:flex-end;
 align-items:center;
 padding:25px 60px;
 font-weight:600;
@@ -125,7 +125,7 @@ margin-top:10px;
 background:#142b73;
 }
 
-/* SECTIONS */
+/* SECTION STRUCTURE */
 
 section{
 padding:80px 0;
@@ -186,8 +186,8 @@ margin-top:0;
 /* VALUES */
 
 .values{
-text-align:center;
 background:#ffffff;
+text-align:center;
 }
 
 .values h2{
@@ -250,8 +250,7 @@ width:240px;
 }
 
 nav{
-flex-direction:column;
-gap:12px;
+justify-content:center;
 }
 
 }
@@ -264,15 +263,9 @@ gap:12px;
 <!-- NAV -->
 
 <nav>
-
-<div></div>
-
-<div>
 <a href="#portfolio">Work</a>
 <a href="#resume">Resume</a>
 <a href="#contact">Contact</a>
-</div>
-
 </nav>
 
 <!-- HERO -->
@@ -296,9 +289,7 @@ help people build practical, real world skills.
 </div>
 
 <div class="hero-photo">
-
 <img src="profile.JPG" alt="Jeremy Thorpe">
-
 </div>
 
 </section>
@@ -306,6 +297,8 @@ help people build practical, real world skills.
 <!-- ABOUT -->
 
 <section>
+
+<div class="container">
 
 <h2>About Me</h2>
 
@@ -339,11 +332,15 @@ My work combines creativity with performance outcomes to support real-world skil
 
 </div>
 
+</div>
+
 </section>
 
 <!-- PORTFOLIO -->
 
 <section id="portfolio" class="portfolio">
+
+<div class="container">
 
 <h2>Instructional Design Projects</h2>
 
@@ -379,11 +376,15 @@ Projects have been adapted for portfolio use. Proprietary information has been m
 
 </div>
 
+</div>
+
 </section>
 
 <!-- VALUES -->
 
 <section class="values">
+
+<div class="container">
 
 <h2>What I Believe In</h2>
 
@@ -391,34 +392,24 @@ Projects have been adapted for portfolio use. Proprietary information has been m
 
 <div class="value-item">
 <h3>01. Purity</h3>
-<p>
-Being honest and pure in harmony with a company's mission,
-business goals, and learning deliverables.
-</p>
+<p>Being honest and pure in harmony with a company's mission, business goals, and learning deliverables.</p>
 </div>
 
 <div class="value-item">
-<h3>02. Clear communication</h3>
-<p>
-Kind, clear, concise, and consistent communication with individuals
-and across teams and channels.
-</p>
+<h3>02. Clear Communication</h3>
+<p>Kind, clear, concise, and consistent communication with individuals and across teams and channels.</p>
 </div>
 
 <div class="value-item">
-<h3>03. Actionable solutions</h3>
-<p>
-The rewarding thing about gaps and challenges is creating simple
-and tangible solutions. What's your challenge? I'd love to help.
-</p>
+<h3>03. Actionable Solutions</h3>
+<p>The rewarding thing about gaps and challenges is creating simple and tangible solutions. What's your challenge? I'd love to help.</p>
 </div>
 
 <div class="value-item">
 <h3>04. Adaptability</h3>
-<p>
-Doing what needs to get done is adapting to different working styles
-and leveraging time, technology, and AI tools.
-</p>
+<p>Doing what needs to get done means adapting to different working styles and leveraging time, technology, and AI tools.</p>
+</div>
+
 </div>
 
 </div>
@@ -429,11 +420,15 @@ and leveraging time, technology, and AI tools.
 
 <section id="resume" class="resume">
 
+<div class="container">
+
 <h2>Resume</h2>
 
 <a class="btn" href="JEREMY THORPE 2026.pdf" target="_blank">
 View My Resume
 </a>
+
+</div>
 
 </section>
 
@@ -441,16 +436,18 @@ View My Resume
 
 <section id="contact" class="contact">
 
+<div class="container">
+
 <h2>Contact</h2>
 
 <p>📧 <a href="mailto:jeremydonthorpe@icloud.com">jeremydonthorpe@icloud.com</a></p>
 
+</div>
+
 </section>
 
 <footer>
-
 © 2026 Jeremy Thorpe. All rights reserved.
-
 </footer>
 
 </body>
