@@ -23,7 +23,7 @@ color:#1a1a1a;
 
 nav{
 display:flex;
-justify-content:flex-end;
+justify-content:space-between;
 align-items:center;
 padding:25px 60px;
 font-weight:600;
@@ -39,25 +39,17 @@ nav a:hover{
 color:#1f3a93;
 }
 
-/* HERO */
+/* HERO (UNCHANGED FROM ORIGINAL) */
 
 .hero{
 position:relative;
 background:#a8c7d6;
-padding:120px 0;
-overflow:hidden;
-}
-
-.hero-inner{
-max-width:1100px;
-margin:auto;
-padding:0 60px;
+padding:120px 60px;
 display:grid;
 grid-template-columns:1fr 1fr;
 align-items:center;
+overflow:hidden;
 }
-
-/* decorative shapes */
 
 .hero::before{
 content:"";
@@ -81,7 +73,7 @@ right:120px;
 border-radius:20px;
 }
 
-/* HERO PANEL */
+/* glass panel */
 
 .panel{
 background:rgba(255,255,255,0.35);
@@ -108,6 +100,7 @@ margin-bottom:20px;
 .hero-photo{
 display:flex;
 justify-content:center;
+position:relative;
 }
 
 .hero-photo img{
@@ -139,7 +132,9 @@ section{
 padding:80px 0;
 }
 
-.container{
+/* centered content wrapper */
+
+.section-inner{
 max-width:1100px;
 margin:auto;
 padding:0 60px;
@@ -247,7 +242,7 @@ background:#e6e6e6;
 
 @media(max-width:900px){
 
-.hero-inner{
+.hero{
 grid-template-columns:1fr;
 gap:50px;
 text-align:center;
@@ -258,7 +253,8 @@ width:240px;
 }
 
 nav{
-justify-content:center;
+flex-direction:column;
+gap:12px;
 }
 
 }
@@ -271,16 +267,20 @@ justify-content:center;
 <!-- NAV -->
 
 <nav>
+
+<div><strong>Jeremy Thorpe</strong></div>
+
+<div>
 <a href="#portfolio">Work</a>
 <a href="#resume">Resume</a>
 <a href="#contact">Contact</a>
+</div>
+
 </nav>
 
 <!-- HERO -->
 
 <section class="hero">
-
-<div class="hero-inner">
 
 <div class="panel">
 
@@ -289,9 +289,7 @@ justify-content:center;
 <h2>Instructional Designer & Learning Consultant</h2>
 
 <p>
-I design learner centered training experiences grounded in learning science,
-scenario based practice, and evidence based instructional strategies that
-help people build practical, real world skills.
+I design learner centered training experiences grounded in learning science, scenario based practice, and evidence based instructional strategies that help people build practical, real world skills.
 </p>
 
 <a class="btn" href="#portfolio">View My Work</a>
@@ -299,8 +297,8 @@ help people build practical, real world skills.
 </div>
 
 <div class="hero-photo">
+
 <img src="profile.JPG" alt="Jeremy Thorpe">
-</div>
 
 </div>
 
@@ -310,13 +308,12 @@ help people build practical, real world skills.
 
 <section>
 
-<div class="container">
+<div class="section-inner">
 
 <h2>About Me</h2>
 
 <p>
-I design engaging, learner-focused experiences using evidence-based instructional methods.
-My work combines creativity with performance outcomes to support real-world skill development.
+I design engaging, learner-focused experiences using evidence-based instructional methods. My work combines creativity with performance outcomes to support real-world skill development.
 </p>
 
 <h3>Tools & Technologies</h3>
@@ -352,7 +349,7 @@ My work combines creativity with performance outcomes to support real-world skil
 
 <section id="portfolio" class="portfolio">
 
-<div class="container">
+<div class="section-inner">
 
 <h2>Instructional Design Projects</h2>
 
@@ -382,8 +379,15 @@ Projects have been adapted for portfolio use. Proprietary information has been m
 
 <div class="project">
 <h3>Cultural Competency Training</h3>
-<p>Rise 360 course introducing cultural competency concepts for delivering culturally sensitive care.</p>
-<a class="btn" href="modules/cultural-competency/index.html" target="_blank">Launch Module</a>
+
+<p>
+Rise 360 course introducing cultural competency concepts for delivering culturally sensitive care.
+</p>
+
+<a class="btn" href="modules/cultural-competency/index.html" target="_blank">
+Launch Module
+</a>
+
 </div>
 
 </div>
@@ -396,7 +400,7 @@ Projects have been adapted for portfolio use. Proprietary information has been m
 
 <section class="values">
 
-<div class="container">
+<div class="section-inner">
 
 <h2>What I Believe In</h2>
 
@@ -432,7 +436,7 @@ Projects have been adapted for portfolio use. Proprietary information has been m
 
 <section id="resume" class="resume">
 
-<div class="container">
+<div class="section-inner">
 
 <h2>Resume</h2>
 
@@ -448,7 +452,7 @@ View My Resume
 
 <section id="contact" class="contact">
 
-<div class="container">
+<div class="section-inner">
 
 <h2>Contact</h2>
 
@@ -459,7 +463,9 @@ View My Resume
 </section>
 
 <footer>
+
 © 2026 Jeremy Thorpe. All rights reserved.
+
 </footer>
 
 </body>
