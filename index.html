@@ -38,7 +38,7 @@ nav a:hover{
 color:#1f3a93;
 }
 
-/* HERO (UNCHANGED FROM ORIGINAL) */
+/* HERO */
 
 .hero{
 position:relative;
@@ -49,6 +49,8 @@ grid-template-columns:1fr 1fr;
 align-items:center;
 overflow:hidden;
 }
+
+/* geometric shapes */
 
 .hero::before{
 content:"";
@@ -125,18 +127,12 @@ margin-top:10px;
 background:#142b73;
 }
 
-/* SECTION STRUCTURE */
+/* SECTIONS */
 
 section{
-padding:80px 0;
-}
-
-/* centered content wrapper */
-
-.section-inner{
+padding:80px 60px;
 max-width:1100px;
 margin:auto;
-padding:0 60px;
 }
 
 /* TOOLS GRID */
@@ -183,36 +179,6 @@ box-shadow:0 10px 30px rgba(0,0,0,0.15);
 
 .project h3{
 margin-top:0;
-}
-
-/* VALUES */
-
-.values{
-background:#ffffff;
-text-align:center;
-}
-
-.values h2{
-font-size:40px;
-margin-bottom:50px;
-color:#e0436f;
-}
-
-.values-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:50px;
-text-align:left;
-}
-
-.value-item h3{
-font-size:20px;
-margin-bottom:10px;
-}
-
-.value-item p{
-color:#555;
-line-height:1.6;
 }
 
 /* RESUME */
@@ -307,8 +273,6 @@ I design learner centered training experiences grounded in learning science, sce
 
 <section>
 
-<div class="section-inner">
-
 <h2>About Me</h2>
 
 <p>
@@ -340,15 +304,11 @@ I design engaging, learner-focused experiences using evidence-based instructiona
 
 </div>
 
-</div>
-
 </section>
 
 <!-- PORTFOLIO -->
 
 <section id="portfolio" class="portfolio">
-
-<div class="section-inner">
 
 <h2>Instructional Design Projects</h2>
 
@@ -357,6 +317,7 @@ Projects have been adapted for portfolio use. Proprietary information has been m
 </p>
 
 <div class="projects">
+
 
 <div class="project">
 <h3>Instructor-Led Training Deck</h3>
@@ -375,7 +336,6 @@ Projects have been adapted for portfolio use. Proprietary information has been m
 <p>Rise 360 microlearning course explaining PPO vs HDHP plan differences.</p>
 <a class="btn" href="risemodule/healthinsurance/index.html" target="_blank">Launch Module</a>
 </div>
-
 <div class="project">
 <h3>Cultural Competency Training</h3>
 
@@ -388,45 +348,6 @@ Launch Module
 </a>
 
 </div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- VALUES -->
-
-<section class="values">
-
-<div class="section-inner">
-
-<h2>What I Believe In</h2>
-
-<div class="values-grid">
-
-<div class="value-item">
-<h3>01. Purity</h3>
-<p>Being honest and pure in harmony with a company's mission, business goals, and learning deliverables.</p>
-</div>
-
-<div class="value-item">
-<h3>02. Clear Communication</h3>
-<p>Kind, clear, concise, and consistent communication with individuals and across teams and channels.</p>
-</div>
-
-<div class="value-item">
-<h3>03. Actionable Solutions</h3>
-<p>The rewarding thing about gaps and challenges is creating simple and tangible solutions. What's your challenge? I'd love to help.</p>
-</div>
-
-<div class="value-item">
-<h3>04. Adaptability</h3>
-<p>Doing what needs to get done means adapting to different working styles and leveraging time, technology, and AI tools.</p>
-</div>
-
-</div>
-
 </div>
 
 </section>
@@ -435,15 +356,11 @@ Launch Module
 
 <section id="resume" class="resume">
 
-<div class="section-inner">
-
 <h2>Resume</h2>
 
 <a class="btn" href="JEREMY THORPE 2026.pdf" target="_blank">
 View My Resume
 </a>
-
-</div>
 
 </section>
 
@@ -451,13 +368,9 @@ View My Resume
 
 <section id="contact" class="contact">
 
-<div class="section-inner">
-
 <h2>Contact</h2>
 
 <p>📧 <a href="mailto:jeremydonthorpe@icloud.com">jeremydonthorpe@icloud.com</a></p>
-
-</div>
 
 </section>
 
@@ -469,4 +382,3 @@ View My Resume
 
 </body>
 </html>
-```
