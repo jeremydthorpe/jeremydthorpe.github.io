@@ -50,8 +50,6 @@ align-items:center;
 overflow:hidden;
 }
 
-/* geometric shapes */
-
 .hero::before{
 content:"";
 position:absolute;
@@ -74,7 +72,7 @@ right:120px;
 border-radius:20px;
 }
 
-/* glass panel */
+/* HERO PANEL */
 
 .panel{
 background:rgba(255,255,255,0.35);
@@ -181,6 +179,36 @@ box-shadow:0 10px 30px rgba(0,0,0,0.15);
 margin-top:0;
 }
 
+/* VALUES */
+
+.values{
+text-align:center;
+background:#ffffff;
+}
+
+.values h2{
+font-size:40px;
+margin-bottom:50px;
+color:#e0436f;
+}
+
+.values-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:50px;
+text-align:left;
+}
+
+.value-item h3{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.value-item p{
+color:#555;
+line-height:1.6;
+}
+
 /* RESUME */
 
 .resume{
@@ -254,7 +282,9 @@ gap:12px;
 <h2>Instructional Designer & Learning Consultant</h2>
 
 <p>
-I design learner centered training experiences grounded in learning science, scenario based practice, and evidence based instructional strategies that help people build practical, real world skills.
+I design learner centered training experiences grounded in learning science,
+scenario based practice, and evidence based instructional strategies that
+help people build practical, real world skills.
 </p>
 
 <a class="btn" href="#portfolio">View My Work</a>
@@ -276,7 +306,8 @@ I design learner centered training experiences grounded in learning science, sce
 <h2>About Me</h2>
 
 <p>
-I design engaging, learner-focused experiences using evidence-based instructional methods. My work combines creativity with performance outcomes to support real-world skill development.
+I design engaging, learner-focused experiences using evidence-based instructional methods.
+My work combines creativity with performance outcomes to support real-world skill development.
 </p>
 
 <h3>Tools & Technologies</h3>
@@ -318,7 +349,6 @@ Projects have been adapted for portfolio use. Proprietary information has been m
 
 <div class="projects">
 
-
 <div class="project">
 <h3>Instructor-Led Training Deck</h3>
 <p>Workshop focused on workplace focus, distraction management, and productivity strategies.</p>
@@ -336,18 +366,57 @@ Projects have been adapted for portfolio use. Proprietary information has been m
 <p>Rise 360 microlearning course explaining PPO vs HDHP plan differences.</p>
 <a class="btn" href="risemodule/healthinsurance/index.html" target="_blank">Launch Module</a>
 </div>
+
 <div class="project">
 <h3>Cultural Competency Training</h3>
-
-<p>
-Rise 360 course introducing cultural competency concepts for delivering culturally sensitive care.
-</p>
-
-<a class="btn" href="modules/cultural-competency/index.html" target="_blank">
-Launch Module
-</a>
+<p>Rise 360 course introducing cultural competency concepts for delivering culturally sensitive care.</p>
+<a class="btn" href="modules/cultural-competency/index.html" target="_blank">Launch Module</a>
+</div>
 
 </div>
+
+</section>
+
+<!-- VALUES -->
+
+<section class="values">
+
+<h2>What I Believe In</h2>
+
+<div class="values-grid">
+
+<div class="value-item">
+<h3>01. Purity</h3>
+<p>
+Being honest and pure in harmony with a company's mission,
+business goals, and learning deliverables.
+</p>
+</div>
+
+<div class="value-item">
+<h3>02. Clear communication</h3>
+<p>
+Kind, clear, concise, and consistent communication with individuals
+and across teams and channels.
+</p>
+</div>
+
+<div class="value-item">
+<h3>03. Actionable solutions</h3>
+<p>
+The rewarding thing about gaps and challenges is creating simple
+and tangible solutions. What's your challenge? I'd love to help.
+</p>
+</div>
+
+<div class="value-item">
+<h3>04. Adaptability</h3>
+<p>
+Doing what needs to get done is adapting to different working styles
+and leveraging time, technology, and AI tools.
+</p>
+</div>
+
 </div>
 
 </section>
