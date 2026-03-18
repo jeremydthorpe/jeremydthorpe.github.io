@@ -15,7 +15,36 @@ body{
 margin:0;
 font-family:'Inter',sans-serif;
 background:#f5f7fa;
-color:#1a1a1a;
+}
+
+/* BACKGROUND */
+
+.bg-layer{
+position:fixed;
+width:100%;
+height:100%;
+z-index:0;
+pointer-events:none;
+}
+
+.bg-box{
+position:absolute;
+border-radius:20px;
+background:linear-gradient(135deg, #ffffff, #dbe9f0);
+opacity:0.08;
+animation:float 14s ease-in-out infinite;
+}
+
+.box1{width:260px;height:260px;top:10%;left:8%;filter:blur(4px);}
+.box2{width:200px;height:200px;top:60%;left:5%;filter:blur(8px);}
+.box3{width:300px;height:300px;top:30%;right:10%;filter:blur(10px);}
+.box4{width:180px;height:180px;top:50%;left:40%;filter:blur(14px);}
+.box5{width:120px;height:120px;bottom:10%;right:25%;filter:blur(12px);}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-25px);}
+100%{transform:translateY(0);}
 }
 
 /* NAV */
@@ -23,84 +52,58 @@ color:#1a1a1a;
 nav{
 display:flex;
 justify-content:space-between;
-align-items:center;
 padding:25px 60px;
-font-weight:600;
+position:relative;
+z-index:1;
 }
 
-nav a{
-margin-left:25px;
-text-decoration:none;
-color:#333;
-}
-
-nav a:hover{
-color:#1f3a93;
-}
-
-/* CONTAINER */
+/* CONTENT */
 
 .container{
 max-width:1100px;
 margin:auto;
 padding:80px 60px;
+position:relative;
+z-index:1;
 }
-
-/* HEADER STYLE */
 
 .page-title{
 font-size:64px;
 font-weight:800;
 position:relative;
-display:inline-block;
 margin-bottom:40px;
-color:#0f2a33;
 }
-
-/* swoosh underline */
 
 .page-title::after{
 content:"";
 position:absolute;
-left:0;
 bottom:-8px;
+left:0;
 width:100%;
 height:6px;
 background:#8b2c1d;
-border-radius:3px;
 }
-
-/* CONTENT BOX */
 
 .about-box{
 background:white;
 padding:40px;
 border-radius:14px;
 box-shadow:0 8px 30px rgba(0,0,0,0.08);
-border:1px solid rgba(0,0,0,0.05);
 }
-
-/* TEXT */
 
 .about-text{
 font-size:22px;
 line-height:1.7;
-color:#333;
 }
 
-.about-text p{
-margin-bottom:25px;
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-.page-title{
-font-size:42px;
-}
-.about-text{
-font-size:18px;
-}
+.btn{
+display:inline-block;
+margin-top:30px;
+background:#1f3a93;
+color:white;
+padding:12px 22px;
+border-radius:6px;
+text-decoration:none;
 }
 
 </style>
@@ -108,19 +111,18 @@ font-size:18px;
 
 <body>
 
-<!-- NAV -->
+<div class="bg-layer">
+<div class="bg-box box1"></div>
+<div class="bg-box box2"></div>
+<div class="bg-box box3"></div>
+<div class="bg-box box4"></div>
+<div class="bg-box box5"></div>
+</div>
 
 <nav>
 <div><strong>Jeremy Thorpe</strong></div>
-
-<div>
-<a href="index.html">Home</a>
-<a href="index.html#portfolio">Work</a>
-<a href="index.html#contact">Contact</a>
-</div>
+<div><a href="index.html">Home</a></div>
 </nav>
-
-<!-- CONTENT -->
 
 <div class="container">
 
@@ -130,23 +132,17 @@ font-size:18px;
 
 <div class="about-text">
 
-<p>
-I’ve always been a naturally curious person. I like learning about different people, perspectives, and how things work. That shows up in my work too. I’m always picking up new instructional design tools, taking courses, or reading, whether it’s history or science fiction.
-</p>
+<p>I’ve always been a naturally curious person. I like learning about different people, perspectives, and how things work.</p>
 
-<p>
-I grew up in Utah and spent a lot of time in the mountains. Summers were mostly hiking and camping, and in the winter I was skiing as much as I could. Being out there taught me a lot without really realizing it at the time. You learn how to adjust, figure things out, and keep going when things don’t go as planned. That mindset has stuck with me and definitely shows up in how I approach problems at work.
-</p>
+<p>I grew up in Utah and spent a lot of time in the mountains. That experience shaped how I approach challenges.</p>
 
-<p>
-I like hearing different perspectives and taking the time to understand a problem before jumping to a solution. I’ve worked with people from all over, as well as teams close to home, and I’ve learned that the best outcomes usually come from collaboration and being open to feedback.
-</p>
+<p>I value collaboration, diverse perspectives, and taking time to understand problems before solving them.</p>
 
-<p>
-As an instructional designer, I focus on making learning practical and relevant. I spend time understanding who the learners are, what they need, and what’s going to actually help them do their job better. My goal is always to create learning that people can actually use, not just something they have to complete.
-</p>
+<p>As an instructional designer, I focus on creating learning that people can actually use.</p>
 
 </div>
+
+<a class="btn" href="index.html">← Back to Home</a>
 
 </div>
 
