@@ -18,38 +18,6 @@ background:#f5f7fa;
 color:#1a1a1a;
 }
 
-/* BACKGROUND DEPTH */
-
-.bg-layer{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:0;
-pointer-events:none;
-}
-
-.bg-box{
-position:absolute;
-border-radius:20px;
-background:linear-gradient(135deg, #ffffff, #dbe9f0);
-opacity:0.08;
-animation:float 14s ease-in-out infinite;
-}
-
-.box1{width:260px;height:260px;top:10%;left:8%;filter:blur(4px);}
-.box2{width:200px;height:200px;top:60%;left:5%;filter:blur(8px);animation-delay:3s;}
-.box3{width:300px;height:300px;top:30%;right:10%;filter:blur(10px);animation-delay:6s;}
-.box4{width:180px;height:180px;top:50%;left:40%;filter:blur(14px);animation-delay:2s;}
-.box5{width:120px;height:120px;bottom:10%;right:25%;filter:blur(12px);animation-delay:5s;}
-
-@keyframes float{
-0% { transform: translateY(0px); }
-50% { transform: translateY(-25px); }
-100% { transform: translateY(0px); }
-}
-
 /* NAVBAR */
 
 nav{
@@ -58,14 +26,16 @@ justify-content:space-between;
 align-items:center;
 padding:25px 60px;
 font-weight:600;
-position:relative;
-z-index:1;
 }
 
 nav a{
 margin-left:25px;
 text-decoration:none;
 color:#333;
+}
+
+nav a:hover{
+color:#1f3a93;
 }
 
 /* HERO */
@@ -78,8 +48,33 @@ display:grid;
 grid-template-columns:1fr 1fr;
 align-items:center;
 overflow:hidden;
-z-index:1;
 }
+
+/* geometric shapes */
+
+.hero::before{
+content:"";
+position:absolute;
+width:320px;
+height:320px;
+background:rgba(255,255,255,0.15);
+top:50px;
+left:80px;
+border-radius:20px;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:220px;
+height:220px;
+background:rgba(0,0,0,0.05);
+bottom:40px;
+right:120px;
+border-radius:20px;
+}
+
+/* glass panel */
 
 .panel{
 background:rgba(255,255,255,0.35);
@@ -90,8 +85,24 @@ max-width:520px;
 box-shadow:0 8px 30px rgba(0,0,0,0.1);
 }
 
-.hero h1{font-size:52px;margin:0 0 10px;}
-.hero h2{font-size:22px;font-weight:400;margin-bottom:20px;}
+.hero h1{
+font-size:52px;
+margin:0 0 10px 0;
+}
+
+.hero h2{
+font-size:22px;
+font-weight:400;
+margin-bottom:20px;
+}
+
+/* PHOTO */
+
+.hero-photo{
+display:flex;
+justify-content:center;
+position:relative;
+}
 
 .hero-photo img{
 width:320px;
@@ -112,7 +123,9 @@ font-weight:600;
 margin-top:10px;
 }
 
-.btn:hover{background:#142b73;}
+.btn:hover{
+background:#142b73;
+}
 
 /* SECTIONS */
 
@@ -120,9 +133,9 @@ section{
 padding:80px 60px;
 max-width:1100px;
 margin:auto;
-position:relative;
-z-index:1;
 }
+
+/* TOOLS GRID */
 
 .tools{
 display:grid;
@@ -138,7 +151,11 @@ border-radius:8px;
 box-shadow:0 3px 10px rgba(0,0,0,0.08);
 }
 
-.portfolio{background:#e8f1f5;}
+/* PORTFOLIO */
+
+.portfolio{
+background:#e8f1f5;
+}
 
 .projects{
 margin-top:40px;
@@ -152,9 +169,29 @@ background:white;
 padding:26px;
 border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:all .25s ease;
 }
 
-.values{text-align:center;}
+.project:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.project h3{
+margin-top:0;
+}
+
+  /* VALUES SECTION */
+
+.values{
+text-align:center;
+}
+
+.values h2{
+font-size:40px;
+margin-bottom:70px;
+color:#1a1a1a;
+}
 
 .values-grid{
 display:grid;
@@ -165,13 +202,66 @@ margin:auto;
 text-align:left;
 }
 
-.contact{text-align:center;background:#f2f6f8;}
+.value-item h3{
+font-size:22px;
+margin-bottom:12px;
+}
 
-footer{text-align:center;padding:20px;background:#e6e6e6;}
+.value-item p{
+color:#555;
+line-height:1.6;
+}
+
+/* mobile */
+
+@media(max-width:800px){
+.values-grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+}
+
+/* RESUME */
+
+.resume{
+text-align:center;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+background:#f2f6f8;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+font-size:14px;
+background:#e6e6e6;
+}
+
+/* MOBILE */
 
 @media(max-width:900px){
-.hero{grid-template-columns:1fr;text-align:center;}
-.hero-photo img{width:240px;}
+
+.hero{
+grid-template-columns:1fr;
+gap:50px;
+text-align:center;
+}
+
+.hero-photo img{
+width:240px;
+}
+
+nav{
+flex-direction:column;
+gap:12px;
+}
+
 }
 
 </style>
@@ -179,24 +269,18 @@ footer{text-align:center;padding:20px;background:#e6e6e6;}
 
 <body>
 
-<!-- BACKGROUND -->
-
-<div class="bg-layer">
-<div class="bg-box box1"></div>
-<div class="bg-box box2"></div>
-<div class="bg-box box3"></div>
-<div class="bg-box box4"></div>
-<div class="bg-box box5"></div>
-</div>
-
 <!-- NAV -->
 
 <nav>
+
 <div><strong>Jeremy Thorpe</strong></div>
+
 <div>
 <a href="#portfolio">Work</a>
+<a href="#resume">Resume</a>
 <a href="#contact">Contact</a>
 </div>
+
 </nav>
 
 <!-- HERO -->
@@ -204,20 +288,62 @@ footer{text-align:center;padding:20px;background:#e6e6e6;}
 <section class="hero">
 
 <div class="panel">
+
 <h1>Jeremy Thorpe</h1>
+
 <h2>Instructional Designer & Learning Consultant</h2>
 
 <p>
 I transform ideas into action by creating impactful learning experiences from blueprint to build.
 </p>
 
-<a class="btn" href="#portfolio">View My Work</a><br>
-<a class="btn" href="about.html">Learn More About Me</a>
+<a class="btn" href="#portfolio">View My Work</a>
 
 </div>
 
 <div class="hero-photo">
-<img src="profile.JPG">
+
+<img src="profile.JPG" alt="Jeremy Thorpe">
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section>
+
+<h2>About Me</h2>
+
+<p>
+I design engaging, learner focused experiences using evidence based instructional methods, with a strong focus on helping people feel confident in what they do. I’m passionate about creating learning that feels practical and meaningful, and I enjoy seeing that moment when a learner connects the dots and can apply it in their everyday work.
+
+<h3>Tools & Technologies</h3>
+
+<div class="tools">
+
+<div>Articulate Storyline</div>
+<div>Rise 360</div>
+<div>Adobe Captivate</div>
+<div>Lectora</div>
+<div>Camtasia</div>
+<div>Vyond</div>
+<div>Adobe Creative Suite</div>
+<div>Canva</div>
+<div>Figma</div>
+<div>Reach 360</div>
+<div>Moodle</div>
+<div>Cornerstone</div>
+<div>Workday Learning</div>
+<div>Docebo</div>
+<div>LMS Administration</div>
+<div>Knowledge Management Systems</div>
+<div>AI-Assisted Instructional Design</div>
+<div>Instructional Design Models (ADDIE / SAM)</div>
+<div>Storyboarding</div>.
+<div>Multimedia Development</div>
+<div>Confluence</div>
+
 </div>
 
 </section>
@@ -228,18 +354,80 @@ I transform ideas into action by creating impactful learning experiences from bl
 
 <h2>My Work</h2>
 
+<p>
+Projects have been adapted for portfolio use. Proprietary information has been modified to protect confidentiality.
+</p>
+
 <div class="projects">
+
 
 <div class="project">
 <h3>Instructor-Led Training Deck</h3>
-<p>Workshop focused on workplace focus and productivity.</p>
-<a class="btn" href="Master Your Day.pdf">View Slides</a>
+<p>Workshop focused on workplace focus, distraction management, and productivity strategies.</p>
+<a class="btn" href="Master Your Day.pdf" target="_blank">View Slides</a>
 </div>
 
 <div class="project">
-<h3>Health Insurance Training</h3>
-<p>Rise 360 microlearning course explaining PPO vs HDHP.</p>
-<a class="btn" href="risemodule/healthinsurance/index.html">Launch Module</a>
+<h3>Monthly Operating Report Deck</h3>
+<p>Executive dashboard reporting training metrics and strategic initiatives.</p>
+<a class="btn" href="Operations Training Update Presentation.pdf" target="_blank">View Slides</a>
+</div>
+
+<div class="project">
+<h3>Choosing Health Insurance Training</h3>
+<p>Rise 360 microlearning course explaining PPO vs HDHP plan differences.</p>
+<a class="btn" href="risemodule/healthinsurance/index.html" target="_blank">Launch Module</a>
+</div>
+<div class="project">
+<h3>Cultural Competency Training</h3>
+
+<p>
+Rise 360 course introducing cultural competency concepts for delivering culturally sensitive care.
+</p>
+
+<a class="btn" href="modules/cultural-competency/index.html" target="_blank">
+Launch Module
+</a>
+
+</div>
+</div>
+
+</section>
+
+<!-- VALUES -->
+
+<section class="values">
+
+<h2>What I believe in</h2>
+
+<div class="values-grid">
+
+<div class="value-item">
+<h3>01. Purity</h3>
+<p>
+Being honest and pure in harmony with a company's mission, business goals, and learning deliverables.
+</p>
+</div>
+
+<div class="value-item">
+<h3>02. Clear communication</h3>
+<p>
+Kind, clear, concise, and consistent communication with individuals and across teams and channels.
+</p>
+</div>
+
+<div class="value-item">
+<h3>03. Actionable solutions</h3>
+<p>
+The rewarding thing about gaps and challenges is creating simple and tangible solutions.
+</p>
+</div>
+
+<div class="value-item">
+<h3>04. Adaptability</h3>
+<p>
+Doing what needs to get done is adapting to different working styles and leveraging time, technology, and AI tools.
+</p>
 </div>
 
 </div>
@@ -252,14 +440,22 @@ I transform ideas into action by creating impactful learning experiences from bl
 
 <h2>Contact</h2>
 
-<p>📧 jeremydonthorpe@icloud.com</p>
+<p>📧 <a href="mailto:jeremydonthorpe@icloud.com">jeremydonthorpe@icloud.com</a></p>
 
-<a class="btn" href="https://www.linkedin.com/in/jeremy-t-903597228">LinkedIn</a>
+<br>
+
+<a class="btn" 
+href="https://www.linkedin.com/in/jeremy-t-903597228" 
+target="_blank">
+Follow on LinkedIn
+</a>
 
 </section>
 
 <footer>
-© 2026 Jeremy Thorpe
+
+© 2026 Jeremy Thorpe. All rights reserved.
+
 </footer>
 
 </body>
