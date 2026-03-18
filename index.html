@@ -287,9 +287,43 @@ nav{
 flex-direction:column;
 gap:12px;
 }
+/* SCROLLING FEATURED TEXT */
 
+.marquee{
+overflow:hidden;
+white-space:nowrap;
+position:relative;
+background:#f5f7fa;
+padding:40px 0;
 }
 
+.marquee-track{
+display:inline-block;
+animation:scrollText 20s linear infinite;
+}
+
+.marquee h2{
+display:inline-block;
+font-size:80px;
+font-weight:800;
+color:#0f2a33;
+margin-right:80px;
+opacity:0.6;
+transform:rotate(-8deg);
+}
+
+@keyframes scrollText{
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+}
+/* PORTFOLIO TITLE */
+
+.portfolio h2{
+font-size:48px;
+font-weight:800;
+margin-bottom:20px;
+}
 </style>
 </head>
 
