@@ -331,6 +331,61 @@ color:#555;
 max-width:700px;
 margin-bottom:30px;
 }
+/* FEATURED PROJECT BANNER */
+
+.featured-banner{
+background:#f7f3ee;
+overflow:hidden;
+padding:28px 0 18px 0;
+position:relative;
+}
+
+.featured-track{
+display:flex;
+width:max-content;
+align-items:flex-end;
+animation:featuredScroll 22s linear infinite;
+gap:90px;
+}
+
+.featured-word{
+font-family:'Cormorant Garamond', serif;
+font-size:92px;
+font-weight:700;
+color:#082b3a;
+line-height:1;
+white-space:nowrap;
+display:inline-block;
+opacity:0.98;
+}
+
+/* create the wave effect */
+.featured-word:nth-child(1){ transform:translateY(12px) rotate(-10deg); }
+.featured-word:nth-child(2){ transform:translateY(58px) rotate(8deg); }
+.featured-word:nth-child(3){ transform:translateY(6px) rotate(-9deg); }
+.featured-word:nth-child(4){ transform:translateY(50px) rotate(9deg); }
+.featured-word:nth-child(5){ transform:translateY(10px) rotate(-8deg); }
+.featured-word:nth-child(6){ transform:translateY(55px) rotate(8deg); }
+.featured-word:nth-child(7){ transform:translateY(8px) rotate(-10deg); }
+.featured-word:nth-child(8){ transform:translateY(54px) rotate(8deg); }
+
+@keyframes featuredScroll{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-50%);
+}
+}
+
+@media(max-width:900px){
+.featured-word{
+font-size:56px;
+}
+.featured-track{
+gap:50px;
+}
+}
 </style>
 </head>
 
@@ -414,16 +469,20 @@ I transform ideas into action by creating impactful learning experiences from bl
 <!-- PORTFOLIO -->
 
 <!-- ADD THIS -->
-<div class="marquee">
-  <div class="marquee-track">
-    <h2>Featured Project</h2>
-    <h2>Featured Project</h2>
-    <h2>Featured Project</h2>
-    <h2>Featured Project</h2>
-    <h2>Featured Project</h2>
+
+<div class="featured-banner">
+  <div class="featured-track">
+    <span class="featured-word">Featured Project</span>
+    <span class="featured-word">Featured Project</span>
+    <span class="featured-word">Featured Project</span>
+    <span class="featured-word">Featured Project</span>
+    <span class="featured-word">Featured Project</span>
+    <span class="featured-word">Featured Project</span>
+    <span class="featured-word">Featured Project</span>
+    <span class="featured-word">Featured Project</span>
   </div>
 </div>
-
+  
 <section id="portfolio" class="portfolio">
   
 <section id="portfolio" class="portfolio">
