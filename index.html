@@ -315,9 +315,7 @@ opacity:0.6;
 transform:rotate(-8deg);
 }
 
-@keyframes scrollText{
-0% { transform: translateX(0); }
-100% { transform: translateX(-50%); }
+
 }
 }
 /* PORTFOLIO TITLE */
@@ -395,6 +393,20 @@ position:relative;
 opacity:0.9;
 
 
+.linkedin-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.linkedin-btn img {
+  width: 48px;   /* 👈 THIS is what fixes the huge image */
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.linkedin-btn img:hover {
+  transform: scale(1.08);
 }
 }
 </style>
