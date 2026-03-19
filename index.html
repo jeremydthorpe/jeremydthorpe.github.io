@@ -411,6 +411,23 @@ opacity:0.9;
   width: 48px !important;
 }
 }
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* space between icons */
+  margin-top: 20px;
+}
+
+.contact-icons img {
+  width: 44px;   /* consistent size */
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.1);
+}
 </style>
 </head>
 
@@ -576,7 +593,17 @@ Projects have been adapted for portfolio use. Proprietary information has been m
 
 <h2>Contact</h2>
 
-<p>📧 <a href="mailto:jeremydonthorpe@icloud.com">jeremydonthorpe@icloud.com</a></p>
+<div class="contact-icons">
+
+  <a href="mailto:jeremydonthorpe@icloud.com">
+    <img src="email.png" alt="Email">
+  </a>
+
+  <a href="https://www.linkedin.com/in/jeremy-t-903597228" target="_blank">
+    <img src="linkedin.png" alt="LinkedIn">
+  </a>
+
+</div>
 
 <br>
 
