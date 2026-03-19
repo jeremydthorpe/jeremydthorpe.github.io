@@ -359,17 +359,59 @@ display:inline-block;
 opacity:0.98;
 }
 
-/* create the wave effect */
-.featured-word:nth-child(1){ transform:translateY(12px) rotate(-10deg); }
-.featured-word:nth-child(2){ transform:translateY(58px) rotate(8deg); }
-.featured-word:nth-child(3){ transform:translateY(6px) rotate(-9deg); }
-.featured-word:nth-child(4){ transform:translateY(50px) rotate(9deg); }
-.featured-word:nth-child(5){ transform:translateY(10px) rotate(-8deg); }
-.featured-word:nth-child(6){ transform:translateY(55px) rotate(8deg); }
-.featured-word:nth-child(7){ transform:translateY(8px) rotate(-10deg); }
-.featured-word:nth-child(8){ transform:translateY(54px) rotate(8deg); }
+/* FEATURED FLOATING BANNER */
 
-@keyframes featuredScroll{
+.featured-banner{
+background:transparent;
+overflow:hidden;
+padding:40px 0 10px 0;
+position:relative;
+}
+
+/* TRACK (movement left to right) */
+.featured-track{
+display:flex;
+width:max-content;
+gap:100px;
+animation:scrollFlow 35s linear infinite;
+}
+
+/* TEXT STYLE */
+.featured-word{
+font-family:'Cormorant Garamond', serif;
+font-size:100px;
+font-weight:700;
+color:#082b3a;
+white-space:nowrap;
+display:inline-block;
+position:relative;
+opacity:0.9;
+
+/* subtle wave motion */
+animation:wave 8s ease-in-out infinite;
+}
+
+/* SOFT WAVE (not jumpy) */
+@keyframes wave{
+0%   { transform: translateY(0px) rotate(-8deg); }
+25%  { transform: translateY(12px) rotate(-4deg); }
+50%  { transform: translateY(4px) rotate(-9deg); }
+75%  { transform: translateY(14px) rotate(-5deg); }
+100% { transform: translateY(0px) rotate(-8deg); }
+}
+
+/* stagger timing = “train track” illusion */
+.featured-word:nth-child(1){ animation-delay:0s; }
+.featured-word:nth-child(2){ animation-delay:0.8s; }
+.featured-word:nth-child(3){ animation-delay:1.6s; }
+.featured-word:nth-child(4){ animation-delay:2.4s; }
+.featured-word:nth-child(5){ animation-delay:3.2s; }
+.featured-word:nth-child(6){ animation-delay:4s; }
+.featured-word:nth-child(7){ animation-delay:4.8s; }
+.featured-word:nth-child(8){ animation-delay:5.6s; }
+
+/* smooth continuous scroll */
+@keyframes scrollFlow{
 0%{
 transform:translateX(0);
 }
@@ -378,12 +420,13 @@ transform:translateX(-50%);
 }
 }
 
+/* mobile */
 @media(max-width:900px){
 .featured-word{
-font-size:56px;
+font-size:60px;
 }
 .featured-track{
-gap:50px;
+gap:60px;
 }
 }
 </style>
